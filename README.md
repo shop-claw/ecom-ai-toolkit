@@ -9,7 +9,7 @@ Practical, copy-able guides for running a Shopify business with Claude: memory, 
 | 2b | [Meta Ads connector](guides/02b-meta-ads-connector.md) | Official Meta Ads MCP, a DIY server, and a browser fallback |
 | 3 | [Shopify connector](guides/03-shopify-connector.md) | How a Shopify store is wired to an AI operator, interactive and headless |
 | 3b | [Klaviyo connector](guides/03b-klaviyo-connector.md) | Official Klaviyo MCP: remote and local setup, scopes, safe-send guardrails |
-| 4 | [BFCM 2027 prep + prompts](guides/04-bfcm-2027-prep.md) | Timeline to Nov 26, 2027, seven sections, ready-to-paste prompts |
+| 4 | [BFCM 2027 prep + prompts](guides/04-bfcm-2027-prep.md) | Data-driven plan from Shopify, Meta, Google Ads and Klaviyo data: pull, reconcile, strategy, staging, live monitoring |
 | 5 | [CRO audit skill by ECORN](skills/ecorn-cro-audit/SKILL.md) | A full Shopify CRO audit procedure with GA4 and Clarity, as a Claude skill |
 
 ## Using the CRO audit skill
