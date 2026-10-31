@@ -1,4 +1,4 @@
-# ShopClaw guides
+# Ecom AI Toolkit
 
 Practical, copy-able guides for running a Shopify business with Claude: memory, ad connectors, store connection, seasonal prep and an audit skill.
 
