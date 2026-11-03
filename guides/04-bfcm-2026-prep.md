@@ -1,10 +1,10 @@
-# BFCM 2027 prep: a data-driven plan built on your connectors
+# BFCM 2026 prep: a data-driven plan built on your connectors
 
-Black Friday is November 26, 2027. Cyber Monday is November 29, 2027.
+Black Friday is November 27, 2026. Cyber Monday is November 30, 2026.
 
 Most BFCM plans start from opinions and last year's screenshots. This one starts from your own data. You connect Shopify, Meta Ads, Google Ads and Klaviyo to Claude, pull what actually happened, reconcile it into one data pack, and only then build the strategy and the activities. Every plan, number and prompt below is meant to run on real connector data, not on benchmarks from memory.
 
-The planning framework (offer, existing customers, site, channels, support, post-purchase, measurement) is adapted from Nik Sharma's [BFCM 2026 planning guide](https://www.nik.co/guides/bfcm-2026). The structure follows his questions; the data workflow, the 2027 timeline and all prompts are new. His caveat applies to everything here: past results are not forecasts.
+The planning framework (offer, existing customers, site, channels, support, post-purchase, measurement) is adapted from Nik Sharma's [BFCM 2026 planning guide](https://www.nik.co/guides/bfcm-2026). The structure follows his questions; the data workflow, the timeline and all prompts are new. His caveat applies to everything here: past results are not forecasts.
 
 The core premise: **start with an offer you can explain and fulfill profitably.**
 
@@ -24,25 +24,23 @@ Rules for the whole project:
 
 - **Read-only until the plan is approved.** Connect Meta, Google and Klaviyo in read-only mode for the data pull.
 - **Stage, never launch.** Meta campaigns are created paused, Google changes go through preview then confirm, Klaviyo work stays in draft, Shopify discounts are built and tested before the start time. A human presses every live button.
-- **Keep everything in one place.** Save outputs in a `bfcm-2027/` folder in your [store brain](01-store-brain.md) so next year starts with this year's playbook.
+- **Keep everything in one place.** Save outputs in a `bfcm-2026/` folder in your [store brain](01-store-brain.md) so next year starts with this year's playbook.
 - **Mark every number** as `measured` (from a connector), `derived` (calculated from measured numbers) or `assumed` (a guess you state out loud). Ask Claude to do the same.
 
 ## Timeline
 
-Dates are weeks before Black Friday (Nov 26, 2027). Work backward from your slowest dependency, usually inventory or creative approval.
+Black Friday is November 27, 2026, so this is a compressed sprint of about three and a half weeks. Work backward from your slowest dependency, usually inventory or creative approval. If you run this earlier in the year, the full runway is 16 weeks: count back from Black Friday and keep the same order of steps.
 
 | When | Date | What must be done |
 |---|---|---|
-| **Now to Dec 2026** | Nov 13 to Dec 3, 2026 | Capture BFCM 2026 live with daily snapshots (Part 6). It becomes your freshest baseline. |
-| Dec 2026 | Dec 7 onward | Post-mortem on BFCM 2026. Write the playbook into the brain. |
-| T-16 | Aug 6, 2027 | Data pack refreshed. Offer candidates shortlisted against margin and stock. |
-| T-12 | Sep 3 | Offer locked. Channel budgets and audience plan approved. Creative briefs out. |
-| T-8 | Oct 1 | Creative approved. Site frozen except fixes. Email and SMS drafted in Klaviyo. |
-| T-6 | Oct 15 | Discounts and bundles built and tested with realistic carts. Meta and Google campaigns built paused or staged. |
-| T-4 | Oct 29 | Mobile checkout test end to end. Support answers written. All links verified. |
-| T-2 | Nov 12 | Final QA. Owners confirmed. Change log opened. Daily snapshot job ready. |
-| Week of | Nov 22 | Monitor. No new apps, no checkout changes. |
-| After | Dec 1 onward | Review against plan. Follow the new-customer cohort. Save the playbook. |
+| T-3.5 weeks | Nov 3 to 5 | Connectors verified. Data pack built (Parts 1 to 3). |
+| T-3 weeks | Nov 6 to 9 | Offer locked against margin and stock. Channel budgets and audience plan approved. |
+| T-2.5 weeks | Nov 10 to 13 | Creative approved. Site frozen except fixes. Email and SMS drafted in Klaviyo. |
+| T-2 weeks | Nov 14 to 17 | Discounts and bundles built and tested with realistic carts. Meta and Google campaigns built paused or staged. |
+| T-1 week | Nov 18 to 20 | Mobile checkout test end to end. Support answers written. All links verified. |
+| T-5 days | Nov 21 to 22 | Final QA. Owners confirmed. Change log opened. Daily snapshot job ready. |
+| Live | Nov 23 to Dec 2 | Monitor with daily snapshots (Part 6). No new apps, no checkout changes. Cyber Monday is Nov 30. |
+| After | Dec 3 onward | Post-mortem. Review against plan. Follow the new-customer cohort. Save the playbook in the brain. |
 
 ## Part 1: Connect and verify
 
@@ -67,7 +65,7 @@ Use two windows. Define them once and reuse them in every prompt.
 - **Window A: last BFCM.** From 14 days before Black Friday to 3 days after Cyber Monday. For 2025 that is Nov 14 to Dec 4, 2025. For 2026 it is Nov 13 to Dec 3, 2026.
 - **Window B: baseline.** The 8 weeks before Window A. This shows what BFCM changed.
 
-Save each pull as a CSV in `bfcm-2027/data/`.
+Save each pull as a CSV in `bfcm-2026/data/`.
 
 ### 2.1 Shopify: what sold, at what margin, with how much stock
 
@@ -180,7 +178,7 @@ Rules:
 **Prompt: reconcile**
 
 ```
-Build the BFCM data pack for [brand] from the CSVs in bfcm-2027/data/.
+Build the BFCM data pack for [brand] from the CSVs in bfcm-2026/data/.
 Produce one table by day for Window A: Shopify net sales, orders, new-customer orders, gross margin,
 total ad spend (Meta + Google), blended MER, Meta-reported ROAS, Google-reported ROAS,
 Klaviyo-attributed revenue, emails sent, sessions.
@@ -190,7 +188,7 @@ Then answer:
 3. What share of revenue came from new vs returning customers, and what was the margin of each?
 4. Which products sold out, on what day, and what did that cost us (estimated, marked assumed)?
 Mark every figure measured, derived or assumed. List the data gaps that limit confidence.
-Save the pack as bfcm-2027/data-pack.md.
+Save the pack as bfcm-2026/data-pack.md.
 ```
 
 Read the pack yourself before moving on. If a number surprises you, ask Claude to show the query behind it.
@@ -208,7 +206,7 @@ Each prompt below needs the data pack attached or referenced. They map to the se
 **Prompt: offer economics**
 
 ```
-Using the data pack and product-level Shopify data, compare these offer options for BFCM 2027:
+Using the data pack and product-level Shopify data, compare these offer options for BFCM 2026:
 [bundle A], [gift with purchase B], [limited set C], [X% off selected products D].
 For each, compute from our own history: units we can sell given inventory and the daily sell rate,
 gross margin per order after the offer, discount leakage to returning customers, and the effect on AOV.
@@ -226,7 +224,7 @@ assumed and show the sensitivity. Do not use industry benchmarks unless you cite
 **Prompt: loyalty stress test**
 
 ```
-Here is the BFCM 2027 offer: [terms]. Using Shopify order history, subscription rules and the Klaviyo
+Here is the BFCM 2026 offer: [terms]. Using Shopify order history, subscription rules and the Klaviyo
 VIP and recent-buyer segments, find every way an existing customer could end up better or worse off
 than a new one. Size each loophole using last year's returning-customer discount usage. Propose one
 early-access mechanic for the top [N] customers and estimate its cost. Draft the suppression rules
@@ -240,7 +238,7 @@ This is where the four connectors earn their keep. Plan budget, audience and cre
 **Prompt: cross-channel plan**
 
 ```
-Using the data pack, build a BFCM 2027 channel plan.
+Using the data pack, build a BFCM 2026 channel plan.
 Inputs: total paid budget [amount], target blended MER [x], email list engaged segments today, last
 year's daily revenue curve, and Meta CPM change from baseline to peak.
 Return:
@@ -268,7 +266,7 @@ Once the plan is approved, let Claude build the work in a paused or draft state 
 **Prompt: stage the build**
 
 ```
-Build the approved BFCM 2027 plan in staging only.
+Build the approved BFCM 2026 plan in staging only.
 Meta: paused campaigns per the plan, dry run first, naming convention BFCM27 | [objective] | [audience].
 Google: staged changes with preview, no confirm.
 Klaviyo: drafts only, each with its audience, exclusions, links and the discount code it uses.
@@ -287,7 +285,7 @@ Anything you could not stage, list with the reason.
 **Prompt: readiness checklist from your own data**
 
 ```
-Create the pre-launch QA checklist for BFCM 2027 using our data: the 5 most common cart compositions
+Create the pre-launch QA checklist for BFCM 2026 using our data: the 5 most common cart compositions
 from last year's Window A orders (from Shopify), the top payment methods and countries, the discount
 combinations that caused problems, and the pages that drove the most sessions. Output a table:
 check, how to test, expected result, owner, status.
@@ -299,7 +297,7 @@ I have not given you.
 **Prompt: post-purchase sequence**
 
 ```
-Design the post-purchase email and SMS sequence for first-time BFCM 2027 buyers. Use last year's data:
+Design the post-purchase email and SMS sequence for first-time BFCM 2026 buyers. Use last year's data:
 median delivery time, time to first reorder by product, return rate by product, and the flow
 performance in the data pack. For each message: trigger relative to delivery, goal, content, and the
 metric that tells us it worked. Draft in Klaviyo as drafts only.
@@ -326,7 +324,7 @@ blended MER and spend by channel vs the budget curve; any campaign that is budge
 frequency above [x]; Klaviyo sends today with revenue so far, unsubscribe and complaint rates;
 products below [N] days of stock at today's sell rate; site conversion by device.
 End with the three decisions I need to make in the next 2 hours, each with the data behind it.
-Do not change anything. Save as bfcm-2027/snapshots/[date]-[am|pm].md.
+Do not change anything. Save as bfcm-2026/snapshots/[date]-[am|pm].md.
 ```
 
 Decisions to make from the snapshot, by a person: lift or cut a budget, swap a creative, hold or pause a send, remove a sold-out product from ads.
@@ -341,7 +339,7 @@ Return: results vs plan by channel and offer, margin after returns, what surpris
 what to drop, the change log in order, new-customer cohort size, and the plan for following that cohort
 (first reorder timing, products, expected repeat rate marked assumed).
 Write a one-page playbook for next year. Label every figure measured, derived or assumed.
-Save to bfcm-2027/postmortem.md and update the store brain's playbooks.
+Save to bfcm-2026/postmortem.md and update the store brain's playbooks.
 ```
 
 Then, at day 30, 60 and 90, pull the cohort again and compare against the post-mortem. The discount did not create loyalty by itself; the data shows whether it did.
