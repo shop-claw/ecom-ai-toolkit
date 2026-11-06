@@ -1,6 +1,8 @@
-# Ecom AI Toolkit
+# eCom AI Toolkit by ShopClaw
 
-Practical, copy-able guides for running a Shopify business with Claude: memory, ad and email connectors, store connection, seasonal prep and an audit skill.
+The free public starting point for [ShopClaw by ECORN](https://getshopclaw.com/), an AI operations workflow for Shopify stores.
+
+Practical, copy-able guides for running a Shopify business with Claude Code or Codex: memory, ad and email connectors, store connection, seasonal prep and an audit skill.
 
 | # | Guide | What you get |
 |---|---|---|
